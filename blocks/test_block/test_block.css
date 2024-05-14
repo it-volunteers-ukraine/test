@@ -1,0 +1,6 @@
+.block {
+  display: flex;
+  align-items: center;
+  background: #00e4ba;
+  color: #fff;
+}
