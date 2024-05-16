@@ -44,6 +44,36 @@
             "prepend": "",
             "append": "",
             "maxlength": ""
+        },
+        {
+            "key": "field_66465848767ba",
+            "label": "background_color",
+            "name": "background_color",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#EBEBF2"
+        },
+        {
+            "key": "field_664658587e509",
+            "label": "text_color",
+            "name": "text_color",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#0540F2"
         }
     ],
     "location": [
@@ -63,5 +93,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1715713069
+    "modified": 1715886876
 }

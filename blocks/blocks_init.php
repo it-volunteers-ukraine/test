@@ -26,6 +26,7 @@ function register_acf_blocks() {
         'description'       => __('A test block.'),
         'render_template'   => '/blocks/test_block/test_block.php',
         'enqueue_style'     => get_template_directory_uri(  ) . '/blocks/test_block/test_block.css',
+        'enqueue_script'     => get_template_directory_uri(  ) . '/blocks/test_block/test_block.js',
         'category'          => 'custom-blocks',
     ));
 

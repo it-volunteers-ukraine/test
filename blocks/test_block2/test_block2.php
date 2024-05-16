@@ -1,7 +1,7 @@
 <?php
 
 // Create id attribute allowing for custom "anchor" value.
-$id = 'block2-' . $block['id'];
+$id = 'block-' . $block['id'];
 if( !empty($block['anchor']) ) {
     $id = $block['anchor'];
 }
@@ -23,8 +23,8 @@ $text_color = get_field('text_color');
 
 ?>
 <div id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?>">
-  <div class="block2_photo">
-    <?php echo wp_get_attachment_image( $image, 'large' ); ?>
+  <div class="block2-photo">
+    <?php echo wp_get_attachment_image( $image, 'medium' ); ?>
   </div>
   <p class="block2-text"><?php echo $text; ?></p>
   <style type="text/css">
@@ -33,7 +33,6 @@ $text_color = get_field('text_color');
   ?> {
     background: <?php echo $background_color;
     ?>;
-
     color: <?php echo $text_color;
     ?>;
   }

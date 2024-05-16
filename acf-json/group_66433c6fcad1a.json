@@ -15,7 +15,7 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "I love Wordpress",
+            "default_value": "Implementing a site with WordPress is so exciting! Thank you for this opportunity!",
             "placeholder": "",
             "prepend": "",
             "append": "",
@@ -34,7 +34,7 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "Happy Developer",
+            "default_value": "Happy Employee",
             "placeholder": "",
             "prepend": "",
             "append": "",
@@ -54,6 +54,25 @@
                 "id": ""
             },
             "default_value": "Front end & Wordpress Developer",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_6645fed2f0f99",
+            "label": "button_text",
+            "name": "button_text",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "І я!",
             "placeholder": "",
             "prepend": "",
             "append": "",
@@ -82,36 +101,6 @@
             "max_height": "",
             "max_size": "",
             "mime_types": ""
-        },
-        {
-            "key": "field_66433d058f980",
-            "label": "background_color",
-            "name": "background_color",
-            "type": "color_picker",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": ""
-        },
-        {
-            "key": "field_66433d188f981",
-            "label": "text_color",
-            "name": "text_color",
-            "type": "color_picker",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "#000"
         }
     ],
     "location": [
@@ -131,5 +120,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1715713493
+    "modified": 1715886205
 }
