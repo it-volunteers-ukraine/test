@@ -13,7 +13,7 @@ if( !empty($block['align']) ) {
 $text = get_field('testimonial') ?: 'Your testimonial here...';
 $author = get_field('author') ?: 'Author name';
 $role = get_field('role') ?: 'Author role';
-$image = get_field('image') ?: '245';
+$image = get_field('image');
 $button_text = get_field('button_text') ?: 'Push me';
 $background_color = get_field('background_color');
 $text_color = get_field('text_color');
