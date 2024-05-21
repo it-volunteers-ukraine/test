@@ -22,26 +22,24 @@ function stylesTemplates() {
 }
 
 function stylesTemplatesParts() {
-  return (
-    src("src/styles/template-parts-styles/*.scss")
-      // .pipe(plumber())
-      .pipe(autoprefixer({ overrideBrowserslist: ["last 10 versions"] }))
-      .pipe(scss().on("error", scss.logError))
-      .pipe(scss({ outputStyle: "compressed" }))
-      .pipe(dest("assets/styles/template-parts-styles"))
-  );
+  return src("src/styles/template-parts-styles/*.scss")
+    .pipe(autoprefixer({ overrideBrowserslist: ["last 10 versions"] }))
+    .pipe(scss().on("error", scss.logError))
+    .pipe(scss({ outputStyle: "compressed" }))
+    .pipe(dest("assets/styles/template-parts-styles"));
 }
 
 function styles() {
-  return src("src/styles/main.scss")
+  return src(["src/styles/main.scss", "blocks/**/*.scss"])
     .pipe(autoprefixer({ overrideBrowserslist: ["last 10 versions"] }))
     .pipe(scss().on("error", scss.logError))
+    .pipe(concat("main.css"))
     .pipe(scss({ outputStyle: "compressed" }))
     .pipe(dest("assets/styles"));
 }
 
 function scripts() {
-  return src(["src/scripts/*.js"])
+  return src(["src/scripts/*.js", "blocks/**/*.js"])
     .pipe(concat("main.js"))
     .pipe(uglify())
     .pipe(dest("assets/scripts"));
@@ -60,13 +58,15 @@ function scriptsTemplateParts() {
 }
 
 function watching() {
-  watch("src/styles/*scss", styles);
-  watch("src/styles/template-styles/*scss", stylesTemplates);
-  watch("src/styles/template-parts-styles/*scss", stylesTemplatesParts);
+  watch("src/styles/*.scss", styles);
+  watch("blocks/**/*.scss", styles);
+  watch("src/styles/template-styles/*.scss", stylesTemplates);
+  watch("src/styles/template-parts-styles/*.scss", stylesTemplatesParts);
   watch(["src/images"], images);
-  watch("src/scripts/*js", scripts);
-  watch("src/scripts/template-scripts/*js", scriptsTemplates);
-  watch("src/scripts/template-parts-scripts/*js", scriptsTemplateParts);
+  watch("src/scripts/*.js", scripts);
+  watch("blocks/**/*.js", scripts);
+  watch("src/scripts/template-scripts/*.js", scriptsTemplates);
+  watch("src/scripts/template-parts-scripts/*.js", scriptsTemplateParts);
 }
 
 exports.styles = styles;
