@@ -1,1 +1,1 @@
-console.log("footer part"),console.log("header"),console.log("main");
+console.log("footer part"),console.log("header"),console.log("main");const blockButtonEl=document.getElementById("block-button"),blockEl=document.querySelector(".block-js");blockButtonEl&&blockButtonEl.addEventListener("click",(o=>{o.preventDefault,blockEl.classList.toggle("active")}));

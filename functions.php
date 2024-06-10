@@ -85,3 +85,9 @@ if( function_exists('acf_add_options_page') ) {
       'parent_slug'   => 'theme-general-settings',
   ));
 }
+
+/** add thumbnail to each page */
+add_theme_support( 'post-thumbnails' );
+
+/** add guttenberg blocks support */
+require_once get_template_directory(  ) . "/blocks/blocks_init.php";
