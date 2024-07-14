@@ -39,7 +39,10 @@ function wp_it_volunteers_scripts() {
     wp_enqueue_style( 'contacts-style', get_template_directory_uri() . '/assets/styles/template-styles/contacts.css', array('main') );
     wp_enqueue_script( 'contacts-scripts', get_template_directory_uri() . '/assets/scripts/template-scripts/contacts.js', array(), false, true );
   }
-
+  if ( is_page_template('templates/portfolio.php') ) {
+      wp_enqueue_style( 'portfolio-style', get_template_directory_uri() . '/assets/styles/template-styles/portfolio.css', array('main') );
+      wp_enqueue_script( 'portfolio-scripts', get_template_directory_uri() . '/assets/scripts/template-scripts/portfolio.js', array(), false, true );
+    }
  
 }
 /** add fonts */
